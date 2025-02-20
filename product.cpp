@@ -15,9 +15,9 @@ Product::Product(const std::string category, const std::string name, double pric
 
 Product::~Product()
 {
+  
 
 }
-
 
 double Product::getPrice() const
 {
@@ -50,7 +50,7 @@ bool Product::isMatch(std::vector<std::string>& searchTerms) const
 
 void Product::dump(std::ostream& os) const
 {
-    os << category_ << "\n" << name_ << "\n" << price_ << "\n" << qty_ << endl;
+    os << category_ << "\n" << name_ << "\n" << fixed << setprecision(2) << price_ << "\n" << qty_ << endl;
 }
 
 
